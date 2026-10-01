@@ -7,7 +7,7 @@ client = OpenAI(
     api_key="ollama"
 )
 
-model_name = "llama3.2"
+model_name = "qwen3:8b"
 
 # 1. Dataset of Coding Tasks with Unit Assertions
 CODING_DATASET = [
@@ -70,7 +70,7 @@ for task in CODING_DATASET:
     response = client.chat.completions.create(
         model=model_name,
         messages=[{"role": "user", "content": task["prompt"]}],
-        temperature=0.0 # Greedy decoding for functional reproducibility
+        temperature=0.0
     )
     
     duration = time.perf_counter() - start

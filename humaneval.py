@@ -16,11 +16,11 @@ from deepeval.models import DeepEvalBaseLLM
 from deepeval.benchmarks import HumanEval
 from deepeval.benchmarks.tasks import HumanEvalTask
 
-OLLAMA_HOST = "http://localhost:11434"
+OLLAMA_HOST = "http://34.57.232.168:11434"
 
 
 class QwenModel(DeepEvalBaseLLM):
-    def __init__(self, model_name: str = "qwen3:8b", host: str = OLLAMA_HOST):
+    def __init__(self, model_name: str = "llama3.2:latest", host: str = OLLAMA_HOST):
         self.model_name = model_name
         self.client = ollama.Client(host=host)
 

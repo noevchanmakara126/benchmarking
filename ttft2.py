@@ -3,8 +3,8 @@ import json
 import requests
 
 URL = "http://localhost:11434/api/generate"
-MODEL = "llama3.2:latest"
-PROMPT = "What is DevOps? "
+MODEL = "qwen3:8b"
+PROMPT = "What is DevOps?"
 
 payload = {
     "model": MODEL,

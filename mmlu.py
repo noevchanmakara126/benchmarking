@@ -3,11 +3,11 @@ from deepeval.benchmarks import MMLU
 from deepeval.benchmarks.mmlu.task import MMLUTask
 from deepeval.models import OllamaModel
 
-os.environ["OLLAMA_BASE_API"] = "http://localhost:11434"
+os.environ["OLLAMA_BASE_API"] = "http://34.57.232.168:11434"
 local_model=OllamaModel(model="llama3.2:latest")
 
 benchmark = MMLU(
-    tasks=[MMLUTask.HIGH_SCHOOL_MATHEMATICS, MMLUTask.ASTRONOMY],
+    tasks=[MMLUTask.COLLEGE_COMPUTER_SCIENCE],
     n_shots=1
 )
 
